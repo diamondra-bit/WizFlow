@@ -1,0 +1,83 @@
+:root{
+    --background:#fff;
+    --form-add: #011f2e;
+    --form-add-input: #a1d7f72c;
+}
+[data-theme="dark"]{
+    --background: linear-gradient(to top,#1aa7ec,#4adede);
+    --form-add:#011f2e;
+    --form-add-input: #21597a2c;
+}
+.modal,.overlay{
+    width: 100vw;
+    height: 160vh;
+    top: 0;
+    left:0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+}
+.overlay{
+   background:rgba(0,0,0,0.6);
+}
+
+.overlay-security{
+    background:rgba(0,0,0,0.6);
+    width: 100vw;
+    height: 160vh;
+    top: 0;
+    left:0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+ }
+.modal-content{
+    position: absolute;
+    top: 30%;
+    left: 60%;
+    transform: translate(-50%,-50%);
+    line-height: 1.4;
+    background: var(--background);
+    padding: 14px;
+    width: 600px;
+    height: 400px;
+    overflow: auto;
+}
+.modal-content2{
+    height: 350px;
+    width: 550px;
+}
+
+
+.modal-content-security{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    line-height: 1.4;
+    background: #fff;
+    padding: 14px;
+    width: 600px;
+    height: 400px;
+}
+.form-add{
+    color:var(--form-add);
+    margin-left: 5em;
+}
+.form-add input,select{
+    background:var(--form-add-input);
+    display: block;
+    width: 30em;
+    margin-bottom: 1.2em;
+    margin-top: 0.5em;
+    padding:1em;
+}
+
+select {
+    width: 425px;
+    color: #011f2e;
+}
+.option{
+    background-color: #fff;
+    padding: 20px;
+}

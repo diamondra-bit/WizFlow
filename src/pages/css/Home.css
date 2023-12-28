@@ -1,0 +1,440 @@
+:root{
+    --body_background2:#e7ecf8;
+    --body_background:#fff;
+    --container-navbar-left: #053f5c;
+    --title-card1:#05224e;
+    --title-card3:#053f5c;
+    --title-logo:#d3def1;
+    --container-link:#d0d6e9;
+    --color-card2:#14161e;
+    --card-color:#fff;
+    --utilisateur:#053f5c;
+    --circleBar:#053f5c;
+    --border:#fff;
+}
+
+[data-theme="dark"]{
+    --body_background:#14161e;
+    --body_background2:#14161e;
+    --container-navbar-left: #1b223299;
+    --card-color: #1b223299;
+    --title-card1:#d8deeee8;
+    --title-card3: #4bc0c0;;
+    --title-logo:#00e1ff;
+    --container-link:#9aa8c9a6;
+    --color-card2:rgba(255, 255, 255, 0.5);
+    --utilisateur:linear-gradient(to right,#1aa7ec,#4adede);
+    --circleBar:rgba(255, 255, 255, 0.5);
+    --border:#00e1ff;
+
+}
+/*Notif*/
+.div-notif-show{
+    z-index: 6;
+    position: absolute;
+}
+.notif-show{
+    width: 20em;
+    height: 15em;
+    overflow: auto;
+    margin-left: -15em;
+    position: absolute;
+    top: 4em;
+    background-color: #053f5c;
+    padding: 20px;
+    line-height: 1.5em;
+    color:  #fff;
+    padding-bottom: 30px;
+    border: 1px solid #053f5c;
+    box-shadow:5px 5px 15px #505355;
+}
+.notif-show li{
+    list-style: none;
+    margin-left: -1.3em;
+}
+.notif-read{
+    display: flex;
+    justify-content: space-around;
+    width: 35%;
+    margin: 15px 0 30px;
+    margin-left: 60%;
+}
+.btn-read{
+    border: none;
+    background-color: #fff;
+    color: #053f5c;
+    padding: 5px;
+    margin-left: -28px;
+}
+.link-read{
+    border: none;
+    background-color: #fff;
+    color: #053f5c;
+    padding: 8px;
+    width: 5em;
+    text-decoration: none;
+    text-align: center;
+}
+.settings{
+    display: flex;
+}
+.notif2{
+    width: 2em;
+    position: absolute;
+    top: 1.8em;
+    right: 28px;
+}
+.counter{
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: red;
+    color: white;
+    font-size: 0.8em;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 1.7em;
+    right: 31px;
+}
+
+/*Darkmode*/
+.button{
+    display: block;
+    top: 1.8em;
+    right: 80px;
+    background-color: #566d94;
+    background-color: #053f5c;
+    width: 60px;
+    height: 30px;
+    border-radius: 40px;
+    position: absolute;
+}
+.button::before{
+    position: absolute;
+    content: '';
+    background-color: #fff;
+    width: 25px;
+    height:25px;
+    margin: 2px;
+    border-radius: 50%;
+}
+.navbar-horizontal{
+    display: flex;
+    margin-top: 1em;
+    justify-content: space-between;
+}
+.cercle-utilisateur{
+    width: 3.5em;
+    height: 3.5em;
+    border-radius: 50%;
+    background-color: var(--utilisateur);
+    margin-bottom: 1em;
+   
+}
+
+.navbar-flex{
+    display: flex;
+    width: 7em;
+    justify-content: space-between;
+    float: right;
+}
+
+.utilisateur{
+    margin-top: 1em;
+    margin-left: 2.5em;
+}
+.nom-utilisateur{
+    background: var(--utilisateur);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+.texte-utilisateur{
+    margin-bottom: 1em;
+    background: var(--utilisateur);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+.main-card{
+    display: flex;
+    width: 66em;
+    margin: 0em auto 0;
+}
+
+.card{
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    width: 280px;
+    height: 100px; 
+    margin:2em 2em;
+    border-radius: 10px;
+    box-shadow:5px 5px 15px rgba(0,0,0, 0.3);
+}
+.card-flex{
+    display: flex;
+}
+.main-chart{
+    width: 66em;
+}
+.card-chart{
+    display:flex ;
+    width: 35em;
+    height: 250px;
+    border-radius: 10px;
+    box-shadow:5px 5px 15px rgba(0,0,0, 0.3);
+    margin: 2em 1em 5em 2em;
+    background-color:var(--card-color);
+    color: var(--color-card2);
+    padding: 20px ;
+    padding-left: 60px;
+}
+.progressbar{
+  width: 150px; 
+  height: 100px ;
+  margin :2em auto;
+  color: #e3eff0;
+}
+.circleBarText{
+  margin-top: 5em;
+ text-align: center;
+ color: var(--circleBar);
+
+}
+.pourcentage{
+    width: 20em;
+    height: 250px;
+    border-radius: 10px;
+    box-shadow:5px 5px 15px rgba(0,0,0, 0.3);
+    margin: 2em 1em 5em 2em;
+    background-color:var(--card-color);
+    color: var(--color-card2);
+    padding: 20px ;
+}
+.card1{
+    background-color:var(--card-color);
+}
+.card2{
+    width: 97%;
+    height: 220px;
+    overflow: auto;
+    border-radius: 10px;
+    box-shadow:5px 5px 15px rgba(0,0,0, 0.3);
+    margin: 2em 1em 5em 2em;
+    background-color:var(--card-color);
+    color: var(--color-card2);
+}
+
+
+.container-center{
+    width: 50%;
+    line-height: 2;
+    margin: 3em auto;
+    display: flex;
+}
+
+.container-center:hover{
+    border-left: 10px solid var(--border);
+    margin: 0;
+    padding:10px 3.6em;
+    background-color: rgba(2, 86, 128, 0.5); 
+}
+.container-home{
+    background-color: var(--body_background2);
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: auto; 
+    overflow-y: hidden;
+}
+
+.container-home2{
+    background-color: var(--body_background);
+}
+
+.container-link{
+    text-decoration: none;
+    text-transform: uppercase;
+    color:var(--container-link);
+  font-size: 0.9em;
+}
+.container-navbar-left{
+    width: 250px;
+    height: 100%;
+    background-color: var(--container-navbar-left);
+    border-radius: 10px;
+    box-shadow:5px 5px 15px rgba(0,0,0, 0.3);
+    margin:8px;
+}
+.container-navbar-left2{
+    height: 93.5%;
+}
+.container-logo{
+    margin: 2em auto 6em;
+    width: 25%;
+}
+.history-entree{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 0.5em;
+    margin-left: 4em;
+
+}
+.history1{
+margin-top: 2em;
+}
+.history-nom{
+    width: 15%;
+    color: var(--title-card1);
+}
+.history-date{
+    width: 45%;
+}
+.history-title-entry{
+    margin: -1em 0em 0em 2em;
+    background: var(--utilisateur);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: 200;
+    font-size: 1.4em;
+}
+.image-icone{
+    margin-right: 25px;
+}
+.image-card{
+    margin-top: -1.5em;
+    margin-right: -2.2em;
+}
+.image-utilisateur{
+    margin-top: 1em;
+    margin-left: -2.5em;
+}
+input:checked + .button{
+   /* background-color: #2c2a2a;*/
+   background:var(--utilisateur);
+}
+input:checked + .button::before{
+   transform: translateX(30px);
+}
+input[type="checkbox"]{
+    display: none;
+}
+.ligne{
+    width: 8em;
+    height: 0.1em;
+    margin-top: -3em;
+    margin-left: 3.9em;
+}
+.logo{
+    width: 8em;
+    margin: 2em -3em 0em;
+}
+
+.title-link{
+    margin:3em 0 0 2.9em;
+    color:rgba(255, 255, 255, 0.5);
+    font-size: 0.95em;
+}
+.title-card1{
+    color:var(--title-card1);
+}
+.title-card3{
+    width: 12em;
+    margin: 2em;
+    margin-bottom: 1.5em;
+    margin-left: -1.8em;
+    background: var(--utilisateur);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+.title-logo{
+   /* background: linear-gradient(to top,#1aa7ec,#4adede);
+    -webkit-background-clip: text;
+    background-clip: text;*/
+    color: #1aa7ec;
+    margin-top:0.2em;
+    margin: 1em 0 0 -1em;
+    font-size: 1.6em;
+    
+}
+
+.navbar{
+    margin-top:-1.5em
+}
+
+.container-home{
+    overflow-x: hidden;
+}
+
+@media screen and (max-width:1000px) {
+    .container-navbar-left{
+        width: 150px;
+    }
+    .image-icone, .title-logo{
+        display: none;
+    }
+    .card{
+        width: 18%;
+    }
+
+}
+
+@media screen and (max-width:710px) {
+.nom-utilisateur p{
+    width: 80%;
+}
+}
+
+@media screen and (max-width:530px) {
+    .nom-utilisateur p{
+        width: 10%;
+    }
+}
+
+
+@media screen and (max-width:475px) {
+    .container-navbar-left{
+        width: 70px;
+    }
+    .container-link{
+        display: none;
+    }
+    .logo{
+        width: 6em;
+        margin: 2em -2.6em;
+    }
+    .image-icone{
+        display: block;
+    }
+    .utilisateur,.main-card,.historyUser{
+    display: none;
+    }     
+    
+    .title-card3{
+        margin-top: 5em;
+    }
+    .card2{
+        width: 80%;
+    }
+    .history-entree{
+        margin-left: 0em;
+    }
+    
+}
+
+@media screen and (max-width:380px) {
+
+}
+
+@media screen and (max-width:320px) {
+
+}

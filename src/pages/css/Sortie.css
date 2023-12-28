@@ -1,0 +1,23 @@
+
+.td-id{
+    padding: 20px 0;
+}
+.td-heure{
+    padding-left: 5em;
+}
+.th-heure{
+    width: 5em;
+}
+.th-sortie{
+    width: 5em;
+}
+.td-sortie{
+   padding-left: 3em;
+}
+.th-responsable{
+  width: 0em;
+  padding-left: -2em;
+}
+.td-nom{
+    padding-left: 3em;
+}

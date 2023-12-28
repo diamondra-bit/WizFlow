@@ -1,0 +1,183 @@
+:root{
+--div-table-container2:#ffffff8f;
+--thead:#fff;
+}
+
+[data-theme="dark"]{
+    --div-table-container2:#1b223299;
+    --thead:linear-gradient(to top,#1aa7ec,#4adede);
+}
+.securite{
+   height: 40em;
+}
+.table-container2{
+    width: 165em;
+    margin: 20px;
+    
+}
+.th-numero-mat{
+    width: 0;
+}
+
+.sortie-ligne{
+    background-color: #053f5c;
+    width: 5em;
+    height: 0.1em;
+   margin: 0em auto 4em;
+}
+.thead{
+    color:#053f5c ;
+    background: var(--thead);
+
+}
+.div-table-container2{
+    width: 168em;
+    background-color:var(--div-table-container2);
+    padding: 20px ;
+    margin: 9em 0 0 2em
+}
+
+/*-----SecuriteHome2-----*/
+.carte1{
+    width: 30%;
+    height: 30em;
+    background-color: #fff;
+    box-shadow: 5px 5px 10px rgba(7, 113, 145, 0.3); 
+}
+.carte1:hover{
+    transform: scale(1.1);
+    z-index: 2;
+}
+.choice{
+    display: flex;
+    justify-content: space-around;
+    width: 85%;
+    margin: 5em auto ;
+}
+
+.choice-image{
+    width: 12em;
+    margin-top: 2.5em;
+    margin-left: 5em;
+}
+.choice-image2{
+    width: 14em;
+    margin-top: 0.5em;
+    margin-left: 4em;
+}
+.choice-image3{
+    width: 18em;
+    margin-top: 2.1em;
+    margin-left: 2em;
+}
+.choice-text{
+    width: 75%;
+    margin: 2.5em auto;
+    text-align: center;
+    line-height: 1.5em;
+    color: #032d42;
+}
+.choice-btn{
+    background-color: #054d63;
+   padding: 10px 20px;
+    color: white;
+    font-size: 1em;
+    border: none;
+    text-decoration: none;
+    position: relative;
+    top: 3.5em;
+    left: 0.1em;
+}
+
+/*-----EntreeSec2*/
+.personal-carte{
+    width: 40%;
+    height: 32em;
+    margin: -6.5em auto;
+    background-color: #fff;
+    box-shadow: 5px 5px 10px rgba(7, 113, 145, 0.3); 
+}
+.carte-sortie{
+    height: 36.5em;
+    margin: -9em auto;
+}
+.personal-carte h2{
+    width: 69%;
+    color: #077191;
+    margin: 0em auto;
+    padding-top: 1.2em;
+    padding-bottom: 1em;
+}
+
+.plant-sec{
+    margin-top:-17.5em;
+    margin-left: 2.5em;
+}
+.plant-sec2{
+    margin-top:-16em;
+
+}
+
+
+/*SortieSec2*/
+.sortieSec{
+    padding: 0.1px 0px;
+    width: 90%;
+    background-color: #fff;
+    margin: 2em auto;
+    box-shadow:5px 5px 15px rgba(0,0,0, 0.3);
+}
+.title-sortie-sec{
+    text-align: center;
+}
+.ligne-sortie{
+    width: 12em;
+    background-color:#077191 ;
+    height: 0.1em;
+    margin-left: 42%;
+    margin-bottom: 3em;
+}
+.sortieSec td{
+    text-align: center;
+    padding-left: -1em;
+}
+.theadSec{
+    background: #053f5c;
+    color: #fff;
+}
+.tableSec{
+    color: #032d42;
+}
+ 
+.input-sec{
+    margin-left: -1.2em;
+}
+/*SecuriteHome2
+
+.shape{
+    width: auto;
+    height: 12em;
+    background-color: #053f5c;
+}
+
+.triangle{
+    width: 25em;
+    height: 15em;
+    border-bottom-left-radius: 60%;
+    border-bottom-right-radius: 70%;
+  background-color: #053f5c;
+  margin-top: -5em;
+  margin-right: -10em;
+}
+
+  .courbe {
+    width: 300px;
+    height: 100px;
+    background: #053f5c;   
+    border: none;
+    border-radius: 100px 100px 0 0; 
+    transform: rotate(180deg);
+    border-bottom-left-radius:20px ;
+  }
+
+*/
