@@ -2,7 +2,6 @@ import React, { useState, useEffect, useContext, forwardRef, useImperativeHandle
 import { Link } from 'react-router-dom';
 import notifimg from '../../pages/images/notif.svg';
 import notifDark from '../../pages/images/notifDark.svg'
-import { io } from 'socket.io-client';
 import AuthContext from '../store/authContext';
 import axios from 'axios';
 import done from '../../pages/images/done.svg'
@@ -11,19 +10,16 @@ import show2 from '../../pages/images/show.svg'
 import { useIconeContext } from '../store/IconeContext';
 
 function Darkmode(props, ref) {
-  const [show, setShow] = useState(false);
-  const [firstName, setFirstName] = useState(null);
-  const [lastName, setLastName] = useState(null);
-  const authContext = useContext(AuthContext);
 
-  const [username, setUsername] = useState('');
+const [show, setShow] = useState(false);
+const [username, setUsername] = useState('');
+const [firstname, setFirstName] = useState('');
+const [lastname, setLastName] = useState('');
+const authContext = useContext(AuthContext);
+const { icone, updateIcone } = useIconeContext();
 
-  const { icone, updateIcone } = useIconeContext();
-
-
-
-/*UserId*/
-  useEffect(() => {
+/*Nom de  l'utilisateur connecté*/
+useEffect(() => {
     const userId = localStorage.getItem('userId');
     axios.get(`http://localhost:3003/nomUser/${userId}`)
       .then((response) => {
@@ -41,13 +37,11 @@ function Darkmode(props, ref) {
 
     return () => { 
     };
-  }, [authContext.userId]);
+}, [authContext.userId]);
 
-  /*Vaovao*/
-
-  const [notif, setNotif] = useState([]);
-
-  const triggerNotification = () => {
+/*Notification à chaque sortie*/
+const [notif, setNotif] = useState([]);
+const triggerNotification = () => {
     const newNotification = `${username} a effectué une nouvelle sortie !`;
     axios
       .post('http://localhost:3003/notifications', {
@@ -60,11 +54,10 @@ function Darkmode(props, ref) {
       .catch((error) => {
         console.error('Erreur lors de l\'envoi de la notification :', error);
       });
-  };
+};
 
-  useEffect(() => {
-
-    // Charger la liste de notifications au démarrage de l'application
+/*Liste des notifications*/
+useEffect(() => {
     const listNotif = () => {
       axios
         .get('http://localhost:3003/readNotif')
@@ -75,21 +68,16 @@ function Darkmode(props, ref) {
        
         });
     };
-
-    // Appel initial pour charger les notifications
     listNotif();
+}, []);
 
-  }, []);
-
-
-  useImperativeHandle(ref, () => ({
+useImperativeHandle(ref, () => ({
     triggerNotification
-  }));
+}));
 
-
-  const showNotif = () => {
+const showNotif = () => {
     setShow(!show);
-  };
+};
 
   /* Dark Mode */
   const darkMode = () => {

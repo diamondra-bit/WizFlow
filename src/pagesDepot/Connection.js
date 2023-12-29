@@ -22,7 +22,7 @@ function Connection() {
                 </div>
               </div> 
 
-              {/* <div className='card'>
+               <div className='card'>
                 <div className='box'>
                   <div className='content'>
                       <h2>02</h2>
@@ -31,7 +31,7 @@ function Connection() {
                       <Link to="/LoginEmploye">Se connecter</Link>
                   </div>
                 </div>
-              </div> */}
+              </div> 
 
               <div className='card'>
                 <div className='box'>

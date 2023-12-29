@@ -145,14 +145,7 @@ function Entree({numero}) {
             triggerNotificationInDarkmode ();
             console.log(selectid)
             axios.post(`http://localhost:3003/insertSortie/${selectid}`)
-            axios.put(`http://localhost:3003/updateHeure/${selectid}`,{heure_sort:currentDate2})
-            axios.put(`http://localhost:3003/updateResponsable/${selectid}`,{uid:uid})
-            
-            axios.put(`http://localhost:3003/updateRecepteur/${selectid}`,{recepteur:recepteur})
-            
-            axios.put(`http://localhost:3003/updateSec/${selectid}`)
-            axios.put(`http://localhost:3003/updateSec2/${selectid}`)
-            axios.put(`http://localhost:3003/updateEtat/${selectid}`)
+            axios.put(`http://localhost:3003/updateSec/${selectid}`,{uid:uid,recepteur:recepteur})
             axios.put(`http://localhost:3003/deleteSortie/${selectid}`)
             .catch(err=>console.log(err))
           }

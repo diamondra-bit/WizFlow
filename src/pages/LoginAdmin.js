@@ -22,7 +22,7 @@ function LoginAdmin() {
         event.preventDefault();
 
         axios
-        .post('http://localhost:3003/loginAdmin')
+        .post('http://localhost:3003/loginAdmin',{numero:numero,mdp:mdp})
         .then((response) => {
             if(response.data==="Inséré")
             {

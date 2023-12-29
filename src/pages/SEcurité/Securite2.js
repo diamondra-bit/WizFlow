@@ -54,18 +54,8 @@ function Securite2() {
 
 
     const handleSubmit=()=>{
-
-        axios.put(`http://localhost:3003/sortieSecurite2`,{id_sort:selectid})
-        axios.put(`http://localhost:3003/sortieSecuriteEtat`,{id_sort:selectid})
-        axios.put(`http://localhost:3003/sortieSec22`,{nom_sec:nom_sec,id_sort:selectid})   
-        axios.put(`http://localhost:3003/sortieSec32`,{transport_sec:transport_sec,id_sort:selectid})
-        axios.put(`http://localhost:3003/sortieSec42`,{voiture_id:voiture_id,id_sort:selectid})
-        axios.put(`http://localhost:3003/sortieSec52`,{id_sort:selectid})
-        axios.put(`http://localhost:3003/sortieSecH`,{id_sort:selectid})
-         axios.put(`http://localhost:3003/sortieSecD`,{id_sort:selectid})
-    
-        .catch(err=>console.log(err))
-        
+        axios.put(`http://localhost:3003/sortieSecurite2`,{nom_sec:nom_sec,transport_sec:transport_sec,voiture_id:voiture_id,id_sort:selectid})
+        .catch(err=>console.log(err))    
       }
     useEffect(()=>{
         const listSortie=()=>{

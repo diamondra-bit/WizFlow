@@ -58,14 +58,9 @@ function Securite1() {
         console.log(`Ligne cliquée avec ID : ${selectid}`);
 
         // axios.put(`http://localhost:3003/sortieSec1/`,{id_sec:id_sec,id_sort:id_sort})
-        axios.put(`http://localhost:3003/sortieSec2`,{nom_sec:nom_sec,id_sort:selectid})   
-        axios.put(`http://localhost:3003/sortieSec3`,{transport_sec:transport_sec,id_sort:selectid})
-        axios.put(`http://localhost:3003/sortieSec4`,{voiture_id:voiture_id,id_sort:selectid})
-        axios.put(`http://localhost:3003/sortieSec5`,{id_sort:selectid})
-        axios.put(`http://localhost:3003/sortieSecHeure`,{id_sort:selectid})
-        axios.put(`http://localhost:3003/sortieSecDate`,{id_sort:selectid})
-    
-        .catch(err=>console.log(err))
+        axios.put(`http://localhost:3003/sortieSec2`,
+        {nom_sec:nom_sec,transport_sec:transport_sec,voiture_id:voiture_id,id_sort:selectid})   
+       .catch(err=>console.log(err))
    
       }
     useEffect(()=>{
