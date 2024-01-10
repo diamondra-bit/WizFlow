@@ -21,7 +21,7 @@ const { icone, updateIcone } = useIconeContext();
 /*Nom de  l'utilisateur connecté*/
 useEffect(() => {
     const userId = localStorage.getItem('userId');
-    axios.get(`http://localhost:3003/nomUser/${userId}`)
+    axios.get(`http://192.168.100.48:5000/nomUser/${userId}`)
       .then((response) => {
         if (response.data) {
           setLastName(response.data.lastname);
@@ -44,7 +44,7 @@ const [notif, setNotif] = useState([]);
 const triggerNotification = () => {
     const newNotification = `${username} a effectué une nouvelle sortie !`;
     axios
-      .post('http://localhost:3003/notifications', {
+      .post('http://192.168.100.48:5000/notifications', {
         username: username,
         message: newNotification,
       })
@@ -60,7 +60,7 @@ const triggerNotification = () => {
 useEffect(() => {
     const listNotif = () => {
       axios
-        .get('http://localhost:3003/readNotif')
+        .get('http://192.168.100.48:5000/readNotif')
         .then((response) => {
           setNotif(response.data);
         })

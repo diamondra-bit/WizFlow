@@ -53,7 +53,7 @@ function Chart() {
    const fetchData = async () => {
     try {
     
-      const response = await axios.get(`http://localhost:3003/chartEnt/${userId}`, {
+      const response = await axios.get(`http://192.168.100.48:5000/chartEnt/${userId}`, {
         params: {
           currentWeekStartDate:currentWeekStartDate
         }
@@ -90,7 +90,7 @@ function Chart() {
   const fetchData = async () => {
    try {
 
-    const response = await axios.get(`http://localhost:3003/chartSort/${userId}`, {
+    const response = await axios.get(`http://192.168.100.48:5000/chartSort/${userId}`, {
       params: {
         currentWeekStartDate:currentWeekStartDate
       }
@@ -124,7 +124,7 @@ function Chart() {
  const [totalperc2,setTotalperc2]=useState(0);
  useEffect(() => {
   const fetchData = async () => {
-    await axios.get(`http://localhost:3003/PercEnt/${userId}`)
+    await axios.get(`http://192.168.100.48:5000/PercEnt/${userId}`)
    .then((response)=>{
     setTotalperc2(response.data[0].total);
    })
@@ -137,7 +137,7 @@ function Chart() {
   const [totalperc,setTotalperc]=useState(0);
   useEffect(() => {
    const fetchData = async () => {
-     await axios.get(`http://localhost:3003/PercEntTotal`)
+     await axios.get(`http://192.168.100.48:5000/PercEntTotal`)
     .then((response)=>{
      setTotalperc(response.data[0].total);
     })
@@ -154,7 +154,7 @@ function Chart() {
  const [totalpercSortId,setTotalpercSortId]=useState(0);
  useEffect(() => {
   const fetchData = async () => {
-    await axios.get(`http://localhost:3003/PercSort/${userId}`)
+    await axios.get(`http://192.168.100.48:5000/PercSort/${userId}`)
    .then((response)=>{
     setTotalpercSortId(response.data[0].total);
    })
@@ -166,7 +166,7 @@ function Chart() {
   const [totalpercSort,setTotalpercSort]=useState(0);
   useEffect(() => {
    const fetchData = async () => {
-     await axios.get(`http://localhost:3003/PercSortTotal`)
+     await axios.get(`http://192.168.100.48:5000/PercSortTotal`)
     .then((response)=>{
      setTotalpercSort(response.data[0].total);
     })

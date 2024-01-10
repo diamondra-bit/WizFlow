@@ -13,7 +13,7 @@ function Sortie() {
   /*Afficher les sorties*/
   useEffect(()=>{
     const listMateriel=()=>{
-      axios.get("http://localhost:3003/readSortie")
+      axios.get("http://192.168.100.48:4550/readSortie")
       .then((response)=>{
         setList(response.data)
       })

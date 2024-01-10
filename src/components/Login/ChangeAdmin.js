@@ -21,7 +21,7 @@ function ChangeAdmin() {
         event.preventDefault();
 
         axios
-        .post('http://localhost:3003/changeAdmin',{ancienmdp:ancienmdp,mdp:mdp})
+        .post('http://192.168.100.48:5000/changeAdmin',{ancienmdp:ancienmdp,mdp:mdp})
         .then((response) => {
             if(response.data==="Changé")
             {

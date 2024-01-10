@@ -33,7 +33,7 @@ function Home() {
   /*Afficher l'historique des entrées de matériaux*/
   useEffect(()=>{
     const listEntree=()=>{
-      axios.get(`http://localhost:3003/readHistoryEntree/${userId}`)
+      axios.get(`http://192.168.100.48:4550/readHistoryEntree/${userId}`)
       .then((response)=>{
         setList(response.data)
       })
@@ -45,7 +45,7 @@ function Home() {
   /*Afficher l'historique des entrées de matériaux*/
   useEffect(()=>{
     const listSortie=()=>{
-      axios.get(`http://localhost:3003/readHistorySortie/${userId}`)
+      axios.get(`http://192.168.100.48:4550/readHistorySortie/${userId}`)
       .then((response)=>{
         setList2(response.data)
       })
@@ -58,7 +58,7 @@ function Home() {
   const[nbrmat,setNbrmat]=useState();
   useEffect(()=>{
     const countMat=()=>{
-      axios.get("http://localhost:3003/countMat")
+      axios.get("http://192.168.100.48:4550/countMat")
       .then((response)=>{
         setNbrmat(response.data.sum)
       })
@@ -71,7 +71,7 @@ function Home() {
   const [nbrutil,setNbrutil]=useState("");
   useEffect(()=>{
     const countUtil=()=>{
-      axios.get("http://localhost:3003/countMat1")
+      axios.get("http://192.168.100.48:4550/countMat1")
       .then((response)=>{
         setNbrutil(response.data.name)
       })
@@ -84,7 +84,7 @@ function Home() {
    const[nbrsortie,setNbrsortie]=useState("");
    useEffect(()=>{
     const countSortie=()=>{
-      axios.get("http://localhost:3003/countMat2")
+      axios.get("http://192.168.100.48:4550/countMat2")
       .then((response)=>{
        setNbrsortie(response.data.countSortie)
       })

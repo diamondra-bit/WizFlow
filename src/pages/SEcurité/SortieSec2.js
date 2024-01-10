@@ -7,7 +7,7 @@ function SortieSec2() {
 
   useEffect(()=>{
   const listMateriel=()=>{
-    axios.get("http://localhost:3003/sortiePers")
+    axios.get("http://192.168.100.48:5000/sortiePers")
     .then ((response)=>{
       setList(response.data);
     })
@@ -17,8 +17,8 @@ function SortieSec2() {
   },[])
 
   const handleSortie=(id)=>{
-    axios.post(`http://localhost:3003/insertSortiePers/${id}`)
-    axios.put(`http://localhost:3003/deleteSortiePers/${id}`)
+    axios.post(`http://192.168.100.48:5000/insertSortiePers/${id}`)
+    axios.put(`http://192.168.100.48:5000/deleteSortiePers/${id}`)
     .then(()=>{
       window.location.reload();
     })

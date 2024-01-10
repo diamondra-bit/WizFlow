@@ -29,7 +29,7 @@ function Voiture() {
 
     useEffect(()=>{
       const listVoit=()=>{
-        axios.get("http://localhost:3003/voiture")
+        axios.get("http://192.168.100.48:4550/voiture")
         .then((response)=>{
           setList(response.data)
         })
@@ -40,7 +40,7 @@ function Voiture() {
 
     useEffect(()=>{
       const listUser=()=>{
-        axios.get("http://localhost:3003/tusers")
+        axios.get("http://192.168.100.48:4550/tusers")
         .then((response)=>{
           setListUser(response.data)
         })
@@ -54,7 +54,7 @@ function Voiture() {
     }
     
     const handleSubmit=()=>{
-      axios.post("http://localhost:3003/voitureadd",{nom:nom,designation:designation,immatriculation:immatriculation})
+      axios.post("http://192.168.100.48:4550/voitureadd",{nom:nom,designation:designation,immatriculation:immatriculation})
       .catch (err => console.log(err))
 };
     
@@ -89,8 +89,8 @@ function Voiture() {
 
 
                   <div  className='container-center'>
-                  <Link onClick={logout} ><img src={logout} className='image-icone'/></Link>
-                    <Link onClick={logout} className='container-link'>Quitter</Link>
+                  <Link to="/" ><img src={logout} className='image-icone'/></Link>
+                    <Link to="/" className='container-link'>Quitter</Link>
                   </div>
 
             <div>
@@ -107,11 +107,7 @@ function Voiture() {
                 <div className='inline-add'>
                   <div className='title-material'>Liste des <span><h2 className='title-material-span' >Voitures</h2></span></div>
                 </div>
-              {/*Barre de recherche*/}
-                <div className='search-bar'>
-                  <div> <input type='text' /></div> 
-                  <div > <img src={icone? search2:searchDark} className='icone-search'/> </div>
-                </div>
+           
         </div>
 
         <div className='table-container table-container2'>

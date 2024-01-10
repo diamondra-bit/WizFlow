@@ -22,7 +22,7 @@ function LoginAdmin() {
         event.preventDefault();
 
         axios
-        .post('http://localhost:3003/loginAdmin',{numero:numero,mdp:mdp})
+        .post('http://192.168.100.48:4550/loginAdmin',{numero:numero,mdp:mdp})
         .then((response) => {
             if(response.data==="Inséré")
             {
@@ -66,7 +66,7 @@ function LoginAdmin() {
                     <div className='inputbox'>
                         <img src={person} className='ion-icon'/>
                         <input type='text' required  onChange={(event)=>{setNumero(event.target.value)}}/>
-                        <label for="">Numéro matricule</label>
+                        <label for="">Nom d'utilisateur</label>
                     </div>
 
                     <div className='inputbox'>

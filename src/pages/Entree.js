@@ -41,7 +41,7 @@ function Entree({numero}) {
   /*REcuperer tusers*/
   useEffect(()=>{
     const listUsers=()=>{
-      axios.get("http://localhost:3003/tusers")
+      axios.get("http://192.168.100.48:4550/tusers")
       .then((response)=>{
         setUtilisateur(response.data);
       })
@@ -80,7 +80,7 @@ function Entree({numero}) {
       /*Insérer les matériaux*/
           const handleSubmit= (event)=>{
         
-            axios.post("http://localhost:3003/insert"
+            axios.post("http://192.168.100.48:4550/insert"
             ,{nom:nom,nombre:nombre,id:id})
 
             // for(let i=0; i<2;i++)
@@ -108,7 +108,7 @@ function Entree({numero}) {
         const [list,setList]=useState([]);
           useEffect(()=>{
             const listMateriel=()=>{
-              axios.get("http://localhost:3003/read")
+              axios.get("http://192.168.100.48:4550/read")
               .then((response)=>{
                 setList(response.data)
               })
@@ -144,9 +144,9 @@ function Entree({numero}) {
             toggleModal2();
             triggerNotificationInDarkmode ();
             console.log(selectid)
-            axios.post(`http://localhost:3003/insertSortie/${selectid}`)
-            axios.put(`http://localhost:3003/updateSec/${selectid}`,{uid:uid,recepteur:recepteur})
-            axios.put(`http://localhost:3003/deleteSortie/${selectid}`)
+            axios.post(`http://192.168.100.48:4550/insertSortie/${selectid}`)
+            axios.put(`http://192.168.100.48:4550/updateSec/${selectid}`,{uid:uid,recepteur:recepteur})
+            axios.put(`http://192.168.100.48:4550/deleteSortie/${selectid}`)
             .catch(err=>console.log(err))
           }
 
@@ -154,7 +154,7 @@ function Entree({numero}) {
           const [texte, setTexte] = useState("");
           const [searchlist, setSearchlist] = useState([]);  
           const handleSearch = () => {
-              axios.get(`http://localhost:3003/searchEntree?texte=${encodeURIComponent(texte)}`)
+              axios.get(`http://192.168.100.48:4550/searchEntree?texte=${encodeURIComponent(texte)}`)
               .then((response) => {
                 setSearchlist(response.data); 
               })

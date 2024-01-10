@@ -23,7 +23,7 @@ function AdminSec() {
 
   useEffect(()=>{
     const listSec=()=>{
-      axios.get("http://localhost:3003/securite")
+      axios.get("http://192.168.100.48:4550/securite")
       .then((response)=>{
         setList(response.data)
       })
@@ -56,7 +56,7 @@ function AdminSec() {
 
   const handleSubmit=()=>{
     
-    axios.put(`http://localhost:3003/securiteModify/${selectid}`,{securite:securite,mdp:mdp})
+    axios.put(`http://192.168.100.48:4550/securiteModify/${selectid}`,{securite:securite,mdp:mdp})
     .catch(err=>console.log(err))
 
   }
@@ -91,8 +91,8 @@ function AdminSec() {
 
 
                   <div  className='container-center'>
-                  <Link onClick={logout} ><img src={logout} className='image-icone'/></Link>
-                    <Link onClick={logout} className='container-link'>Quitter</Link>
+                  <Link to="/" ><img src={logout} className='image-icone'/></Link>
+                    <Link to="/" className='container-link'>Quitter</Link>
                   </div>
 
             <div>
@@ -107,11 +107,6 @@ function AdminSec() {
         <div className='container-inline'>
                 <div className='inline-add'>
                   <div className='title-material'>Liste des <span><h2 className='title-material-span' >Matériels Sorties</h2></span></div>
-                </div>
-              {/*Barre de recherche*/}
-                <div className='search-bar'>
-                  <div> <input type='text' /></div> 
-                  <div > <img src={icone? search2:searchDark} className='icone-search'/> </div>
                 </div>
         </div>
 

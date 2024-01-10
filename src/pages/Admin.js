@@ -29,7 +29,7 @@ function Admin() {
 
   useEffect(()=>{
     const listMateriel=()=>{
-      axios.get("http://localhost:3003/readSortie")
+      axios.get("http://192.168.100.48:4550/readSortie")
       .then((response)=>{
         setList(response.data)
       })
@@ -40,7 +40,7 @@ function Admin() {
 
   useEffect(()=>{
     const handleSort=()=>{
-      axios.get("http://localhost:3003/readSortieSort")
+      axios.get("http://192.168.100.48:4550/readSortieSort")
       .then((response)=>{
         setList2(response.data)
       })
@@ -57,7 +57,7 @@ function Admin() {
     
     const handleRowClick=(id)=>{
       togglemodal();
-      axios.get(`http://localhost:3003/readSortieById/${id}`)
+      axios.get(`http://192.168.100.48:4550/readSortieById/${id}`)
       .then((response)=>{
         setListById(response.data)
       })
@@ -92,8 +92,8 @@ function Admin() {
                   </div>
 
                   <div  className='container-center'>
-                  <Link onClick={logout} ><img src={logout} className='image-icone'/></Link>
-                    <Link onClick={logout} className='container-link'>Quitter</Link>
+                  <Link to="/"><img src={logout} className='image-icone'/></Link>
+                    <Link to="/" className='container-link'>Quitter</Link>
                   </div>
 
             <div>

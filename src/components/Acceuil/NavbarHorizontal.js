@@ -14,7 +14,7 @@ function NavbarHorizontal(show) {
   
   useEffect(()=>{
     console.log(userId);
-    axios.get(`http://localhost:3003/nomUser/${userId}`) // Assurez-vous que l'URL correspond à votre endpoint côté serveur.
+    axios.get(`http://192.168.100.48:5000/nomUser/${userId}`) // Assurez-vous que l'URL correspond à votre endpoint côté serveur.
     .then((response) => {
       if (response.data) {
         setLastname(response.data.lastname);

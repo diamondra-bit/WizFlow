@@ -9,7 +9,7 @@ function SecuriteAffichage() {
 
     useEffect(()=>{
         const listMateriel=()=>{
-          axios.get(`http://localhost:3003/readSortie1`)
+          axios.get(`http://192.168.100.48:5000/readSortie1`)
           .then((response)=>{
             setList(response.data)
           })

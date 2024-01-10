@@ -36,7 +36,7 @@ function Connection() {
               <div className='card'>
                 <div className='box'>
                   <div className='content'>
-                      <h2>02 </h2>
+                      <h2>03 </h2>
                       <h3>Sécurité</h3>
                       <p>Connection en tant que sécurité</p>
                       <Link to="/LoginSecurite">Se connecter</Link>
@@ -44,7 +44,7 @@ function Connection() {
                 </div>
               </div>  
 
-              <div className='card'>
+              {/* <div className='card'>
                 <div className='box'>
                   <div className='content'>
                       <h2>03 </h2>
@@ -53,7 +53,8 @@ function Connection() {
                       <Link to="/AffairePers">Se connecter</Link>
                   </div>
                 </div>
-              </div>  
+              </div>
+               */}
               <div className='cercle2'></div>   
           </div>         
          

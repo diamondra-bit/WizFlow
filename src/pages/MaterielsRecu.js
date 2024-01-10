@@ -14,7 +14,7 @@ function MaterielsRecu() {
     useEffect(() => {
         const id = localStorage.getItem('userId');
     
-        axios.get(`http://localhost:3003/readSortieRecepteur?id=${id}`)
+        axios.get(`http://192.168.100.48:4550/readSortieRecepteur?id=${id}`)
             .then((response) => {
                 setList(response.data);
             })
@@ -29,8 +29,8 @@ function MaterielsRecu() {
       
         // Utilisez la nouvelle valeur de selectid dans les appels Axios
         try {
-          await axios.post(`http://localhost:3003/insertEntree/${id}`);
-          await axios.put(`http://localhost:3003/deleteEntree/${id}`);
+          await axios.post(`http://192.168.100.48:4550/insertEntree/${id}`);
+          await axios.put(`http://192.168.100.48:4550/deleteEntree/${id}`);
         } catch (error) {
           console.error("Une erreur s'est produite :", error);
         }

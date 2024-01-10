@@ -34,7 +34,7 @@ function Securite1() {
 
     useEffect(()=>{
         const listUsers=()=>{
-          axios.get("http://localhost:3003/tusers")
+          axios.get("http://192.168.100.48:5000/tusers")
           .then((response)=>{
             setUtilisateur(response.data);
           })
@@ -44,7 +44,7 @@ function Securite1() {
 
       useEffect(()=>{
         const listVoit=()=>{
-          axios.get("http://localhost:3003/voiture")
+          axios.get("http://192.168.100.48:5000/voiture")
           .then((response)=>{
             setVoiture(response.data);
           })
@@ -57,15 +57,15 @@ function Securite1() {
     const handleSubmit=()=>{
         console.log(`Ligne cliquée avec ID : ${selectid}`);
 
-        // axios.put(`http://localhost:3003/sortieSec1/`,{id_sec:id_sec,id_sort:id_sort})
-        axios.put(`http://localhost:3003/sortieSec2`,
+        // axios.put(`http://192.168.100.48:5000/sortieSec1/`,{id_sec:id_sec,id_sort:id_sort})
+        axios.put(`http://192.168.100.48:5000/sortieSec2`,
         {nom_sec:nom_sec,transport_sec:transport_sec,voiture_id:voiture_id,id_sort:selectid})   
        .catch(err=>console.log(err))
    
       }
     useEffect(()=>{
         const listSortie=()=>{
-            axios.get("http://localhost:3003/readSortie")
+            axios.get("http://192.168.100.48:5000/readSortie")
             .then((response)=>{
                 setList(response.data)                
             })

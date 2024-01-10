@@ -46,7 +46,7 @@ function ChangePassword() {
             setErrorNew(false)
         }
 
-        axios.post("http://localhost:3003/change", {numero:numero,oldPassword:oldPassword,newPassword:newPassword} )
+        axios.post("http://192.168.100.48:5000/change", {numero:numero,oldPassword:oldPassword,newPassword:newPassword} )
         .then( (res)=>{
            if(res.data=== "Success")
            {

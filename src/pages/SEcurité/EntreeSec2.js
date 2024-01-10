@@ -22,7 +22,7 @@ function EntreeSec2() {
     },[] )
 
     const handleSubmit=()=>{
-    axios.post("http://localhost:3003/entreePers",
+    axios.post("http://192.168.100.48:5000/entreePers",
     {id:id,nomMat:nomMat,nomRes:nomRes,departement:departement,date_ent:currentDate})
     .catch(err=>console.log(err));
     navigate('/SortieSec2')

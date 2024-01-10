@@ -16,7 +16,7 @@ function AffairePers() {
 
     useEffect(()=>{
         const listSortie=()=>{
-            axios.get("http://localhost:3003/sortiePers")
+            axios.get("http://192.168.100.48:4550/sortiePers")
             .then((response)=>{
                 setList(response.data)                
             })
@@ -30,7 +30,7 @@ function AffairePers() {
       }
 
       const handleSubmit=()=>{
-        axios.post("http://localhost:3003/entreePers",
+        axios.post("http://192.168.100.48:4550/entreePers",
         {id:id,nomMat:nomMat,nomRes:nomRes,departement:departement,date_ent:currentDate})
         .catch(err=>console.log(err));
         }

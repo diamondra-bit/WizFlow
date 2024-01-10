@@ -14,10 +14,11 @@
     --container-inline:#1b223299;
     --title-material:rgba(255, 255, 255, 0.8);
     --tr:#a1d7f72c;
-    --th:linear-gradient(to left,#1aa7ec,#4adede);
+    /* --th:linear-gradient(to left,#1aa7ec,#4adede); */
+    --th:#1b223299;
     --button-entree:linear-gradient(to right,#1aa7ec,#4adede);
     --button-sortir: linear-gradient(to right,#1aa7ec,#4adede);
-    --text-head:#053f5c;
+    --text-head:#1aa7ec;
     --td:#ffffffb9;
 }
 .button-div{
